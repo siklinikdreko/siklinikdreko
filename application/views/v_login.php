@@ -36,7 +36,7 @@
 <div class="login-form">
     <form action="<?php echo base_url('login/aksi_login'); ?>" method="post">
         <h2 class="text-center">Sistem Informasi Klinik Dr.Eko</h2>
-        <h2 class="text-center">================</h2>
+        <h2 class="text-center">=============</h2>
         <h2 class="text-center">Masuk</h2>       
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" name="username" required="required">

@@ -9,7 +9,7 @@ class Auth extends CI_Controller{
  
 	function index(){
 		if ($this->session->userdata("role") == 'admin') {
-			echo "admin";
+			redirect('admin');
 		}
 		elseif ($this->session->userdata("role") == 'dokter') {
 			echo "dokter";

@@ -7,11 +7,11 @@ class Login extends CI_Controller{
 		$this->load->model('UserModel');
 	}
  
-	function index(){
+	public function index(){
 		$this->load->view('v_login');
 	}
  
-	function aksi_login(){
+	public function aksi_login(){
 		$username = $this->input->post('username'); // Ambil isi dari inputan username pada form login
 		$password = md5($this->input->post('password')); // Ambil isi dari inputan password pada form login dan encrypt dengan md5
 		$user = $this->UserModel->get($username); // Panggil fungsi get yang ada di UserModel.php
@@ -39,8 +39,8 @@ class Login extends CI_Controller{
 		}
 	}
  
-	function logout(){
+	public function logout(){
 		$this->session->sess_destroy();
-		redirect(base_url());
+		redirect(base_url('login'));
 	}
 }
