@@ -13,7 +13,7 @@
           <div class="table-responsive"></div> 
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h4 class="m-0 font-weight-bold text-primary">RIWAYAT PENYAKIT PASIEN</h4>
+              <h4 class="m-0 font-weight-bold text-primary">DAFTAR DATA PASIEN</h4>
             </div>
             <div class="card-body">
             </div>
@@ -25,36 +25,38 @@
           <thead>
             <tr>
               <th>No</th>
-              <th>NIP</th>
-              <th>Nama Dokter</th>
               <th>ID Pasien</th>
-              <th>Nama Pasien</th>
-              <th>TTL Pasien</th>
-              <th>Umur Pasien</th>
-              <th>Alamat Pasien</th>
-              <th>Poli</th>
+              <th>Nomor Antrian</th>
+              <th>Nama Lengkap</th>
+              <th>Tgl Periksa</th>
+              <th>TTL</th>
+              <th>Alamat</th>
+              <th>Umur</th>
+              <th>Jenis Kelamin</th>
               <th>Keluhan</th>
               <th>Alergi Obat</th>
-              <th>Resep Obat</th>
+              <th>Status Pasien</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            <?php $no=1; foreach($admin as $data):?>
+            <?php $no=1; foreach($pasien as $data):?>
             <tr>
-              <td><?php echo $no++;?></td>
-              <td><?php echo $data['nip'];?></td>
-              <td><?php echo $data['nama_dokter'];?></td>
-              <td><?php echo $data['id_pasien'];?></td>
-              <td><?php echo $data['nama'];?></td>
-              <td><?php echo $data['tgl_lahir'];?></td>
-              <td><?php echo $data['umur'];?></td>
-              <td><?php echo $data['alamat'];?></td>
-              <td><?php echo $data['poli'];?></td>
-              <td><?php echo $data['keluhan'];?></td>
-              <td><?php echo $data['alergi_obat'];?></td>
-              <td><?php echo $data['resep_obat'];?></td>
+              <td><?php echo $no++; ?></td>
+              <td><?php echo $data['id_pasien']; ?></td>
+              <td><?php echo $data['no_antrian']; ?></td>
+              <td><?php echo $data['nama']; ?></td>
+              <td><?php echo $data['tgl_periksa']; ?></td>
+              <td><?php echo $data['tgl_lahir']; ?></td>
+              <td><?php echo $data['alamat']; ?></td>
+              <td><?php echo $data['umur']; ?></td>
+              <td><?php echo $data['jenis_kelamin']; ?></td>
+              <td><?php echo $data['keluhan']; ?></td>
+              <td><?php echo $data['alergi_obat']; ?></td>
+              <td><?php echo $data['status_pasien']; ?></td>
+              <td><a href="<?php echo base_url('dokter/periksa_pasien');?>/<?php echo $data['id_pasien'];?>"><button class="btn btn-outline-warning">Periksa</button></a></td>
             </tr>
-            <?php endforeach; ?>
+          <?php endforeach; ?>
           </tbody>
         </table>
       </div>

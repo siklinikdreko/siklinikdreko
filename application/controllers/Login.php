@@ -24,6 +24,7 @@ class Login extends CI_Controller{
 			if($password == $user->password){ // Jika password yang diinput sama dengan password yang didatabase
 				$session = array(
 				// 'authenticated'=>true, // Buat session authenticated dengan value true
+				'id_user'=>$user->id_user,
 				'username'=>$user->username,  // Buat session username
 				'nama'=>$user->nama, // Buat session nama
 				'role'=>$user->role // Buat session role
@@ -41,6 +42,6 @@ class Login extends CI_Controller{
  
 	public function logout(){
 		$this->session->sess_destroy();
-		redirect(base_url('login'));
+		echo '<script language="javascript">alert("Anda Berhasil Log Out"); window.location.href="'. base_url() .'";</script>';
 	}
 }

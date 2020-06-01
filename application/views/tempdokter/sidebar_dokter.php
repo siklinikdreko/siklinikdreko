@@ -7,7 +7,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('admin')?>">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('dokter')?>">
         <div class="sidebar-brand-icon">
           <i class="fas fa-hospital-alt"></i>
         </div>
@@ -19,7 +19,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('admin')?>">
+        <a class="nav-link" href="<?php echo base_url('dokter')?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -27,21 +27,15 @@
 
       <!-- Nav Item - Pasien -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/list_pasien')?>">
+        <a class="nav-link" href="<?php echo base_url('dokter/pasien')?>">
           <i class="fas fa-user-injured"></i>
           <span>Pasien</span></a>
       </li>
 
-      <!-- Nav Item - Dokter -->
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/list_dokter')?>">
-          <i class="fas fa-user-md"></i>
-          <span>Dokter</span></a>
-      </li>
 
       <!-- Nav Item - Riwayat Periksa -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/riwayat_periksa')?>">
+        <a class="nav-link" href="<?php echo base_url('dokter/riwayat_pasien')?>">
           <i class="fas fa-notes-medical"></i>
           <span>Riwayat Periksa</span></a>
       </li>
@@ -106,12 +100,12 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['nama']; ?></span>
                 <!-- <img class="img-profile rounded-circle" src=""> -->
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="<?php echo base_url('admin/pengaturan_admin') ?>">
+                <a class="dropdown-item" href="<?php echo base_url('dokter/pengaturan_dokter') ?>">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                   Settings
                 </a>
